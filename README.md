@@ -123,7 +123,10 @@ Use this command to specify your own names, substituting `user_name`, `my_passwo
 ```
 bash bin/database.sh [-D, --domain] example.com [-U, --user] USER_NAME [-P, --password] MY_PASS [-DB, --database] DATABASE_NAME
 ```
-Additionally, if you want to use a RDS instance or an external database instance, you can skip this local database creation step altogether and configure the database properties only in the next section.
+Additionally, if you want to use a RDS instance or an external database instance, you can supply a remote host which will setup the required config files without installing a local database.
+```
+bin/database.sh -D thatmillennialstore.com -U thatmillennial_store -P <password> -DB thatmillennial_store -R instancename.uidz.ap-zone.rds.amazonaws.com
+```
 ### Installing a WordPress Site
 To preconfigure the `wp-config` file, run the `database.sh` script for your domain, before you use the following command to install WordPress:
 ```
