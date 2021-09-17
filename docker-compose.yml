@@ -31,3 +31,7 @@ services:
     environment:
         - PMA_ARBITRARY=1
     restart: always
+  # memcached
+  memcached:
+    image: memcached:alpine
+    restart: unless-stopped
