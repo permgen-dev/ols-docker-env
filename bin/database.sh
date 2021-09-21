@@ -118,7 +118,7 @@ auto_setup_main(){
 specify_setup_main(){
     specify_name
     check_db_exist ${SQL_DB}
-    check_db_access
+    #check_db_access
     db_setup
     display_credential
     store_credential ${DOMAIN}
