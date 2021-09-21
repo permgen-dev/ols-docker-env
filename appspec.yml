@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+ - source: .
+   destination: /home/ec2-user/openlitespeed/
+hooks:
+  ApplicationStart:
+   - location: bin/start_server
+     timeout: 300
+     runas: root
+ ApplicationStop:
+   - location: bin/start_server
+     timeout: 300
+     runas: root
