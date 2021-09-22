@@ -190,4 +190,7 @@ If you still have a question after using OpenLiteSpeed Docker, you have a few op
 * Post to [the OpenLiteSpeed Forums](https://forum.openlitespeed.org/) for community support
 * Reporting any issue on [Github ols-docker-env](https://github.com/litespeedtech/ols-docker-env/issues) project
 
+New:
+Addded changes for github actions. Now simply merge code into master to apply changes.
+
 **Pull requests are always welcome** 
