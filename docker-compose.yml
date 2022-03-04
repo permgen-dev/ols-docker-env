@@ -24,7 +24,7 @@ services:
       TZ: ${TimeZone}
   # phpmyadmin
   phpmyadmin:
-    image: phpmyadmin
+    build: .
     ports:
       - 8080:80
       - 8443:443
