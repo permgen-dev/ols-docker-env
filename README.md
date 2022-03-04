@@ -21,7 +21,7 @@ git clone https://github.com/litespeedtech/ols-docker-env.git
 ```
 Open a terminal, `cd` to the folder in which `docker-compose.yml` is saved, and run:
 ```
-docker-compose up
+docker-compose up -d --build
 ```
 
 Note: If you wish to run a single web server container, please see the [usage method here](https://github.com/litespeedtech/ols-dockerfiles#usage).
@@ -79,13 +79,13 @@ Cloned project
 ### Starting a Container
 Start the container with the `up` or `start` methods:
 ```
-docker-compose up
+docker-compose up --build
 ```
 You can run with daemon mode, like so:
 ```
-docker-compose up -d
+docker-compose up -d --build
 ```
-The container is now built and running. 
+The container is now built and running. If you get an error, check the Dockerfile. There may be one of the commands that is failing.
 ### Stopping a Container
 ```
 docker-compose stop
