@@ -3,6 +3,12 @@ services:
   # web server
   litespeed:
     image: litespeedtech/openlitespeed:${OLS_VERSION}-${PHP_VERSION}
+    build:
+      context: .
+      dockerfile: Dockerfile-litespeed
+      args:  
+        - PHP_VERSION:"lsphp80"
+        - OLS_VERSION:"1.7.11"
     env_file:
       - .env
     volumes:
@@ -24,7 +30,9 @@ services:
       TZ: ${TimeZone}
   # phpmyadmin
   phpmyadmin:
-    build: .
+    build:
+      context: . 
+      dockerfile: Dockerfile-phpmyadmin
     ports:
       - 8080:80
       - 8443:443
