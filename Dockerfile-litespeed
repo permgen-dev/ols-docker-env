@@ -1,0 +1,8 @@
+# syntax=docker/dockerfile:1
+FROM litespeedtech/openlitespeed:latest
+
+RUN sed -i 's/^upload_max_filesize.*/upload_max_filesize = 200M/g' /usr/local/lsws/lsphp80/etc/php/*/litespeed/php.ini
+RUN sed -i 's/^post_max_size.*/post_max_size = 200M/g' /usr/local/lsws/lsphp80/etc/php/*/litespeed/php.ini
+RUN sed -i 's/^max_execution_time.*/max_execution_time = 120/g' /usr/local/lsws/lsphp80/etc/php/*/litespeed/php.ini
+
+EXPOSE 443
